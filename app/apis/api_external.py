@@ -96,7 +96,7 @@ class ApiExternalUtil:
 
         dfGrouped["tooltip_text"] = dfGrouped.apply(
             lambda
-                row: f"El día {row["day_name"]} tendrá una probabilidad del {values.loc[row.name]:.2f}% de estar {weatherType} "
+                row: f"El día {row['day_name']} tendrá una probabilidad del {values.loc[row.name]:.2f}% de estar {weatherType} "
                      f"con una posible temperatura de {row['temperature_celsius']}", axis=1
         )
 

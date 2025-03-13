@@ -10,7 +10,6 @@ app.register_blueprint(graphRoutes)
 CORS(app, resources={r"/*": {"origins": "*"}})
 handlerExceptionsGlobals(app=app)
 
-
 if __name__ == '__main__':
    port = os.environ.get("PORT", "10000")
    os.system(f"gunicorn -b 0.0.0.0:{port} main:app")
